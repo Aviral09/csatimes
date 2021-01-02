@@ -13,8 +13,8 @@ const router = new Router( {
   routes: [
     {
       path: '/',
-      name: 'home',
-      redirect: '/student'
+      name: 'login',
+      redirect: '/login'
     },
     {
       path: '//auth',
