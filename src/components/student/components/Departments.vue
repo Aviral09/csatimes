@@ -36,22 +36,13 @@
     </div>
 </template>
 <script>
-// import data from '../../../data/por.json'
-import axios from 'axios'
+import data from '../../../data/por.json'
 export default {
   data () {
     return {
       clubs: data,
     }
   },
-  mounted() {
-    axios
-      .get(process.env.VUE_APP_POR)
-      .then(response => {
-        this.clubs = response.data
-      })
-
-  }
 }
 </script>
 

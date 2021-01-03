@@ -47,15 +47,14 @@
 </template>
 
 <script>
-// import users from '../../../data/humanities.json'
-import axios from 'axios'
+import users from '../../../data/humanities.json'
 
 export default {
   name: 'Humanity',
   data () {
     return {
       term: null,
-      users: null,
+      users: users,
     }
   },
   computed: {
@@ -79,14 +78,6 @@ export default {
       })
     },
   },
-  mounted() {
-    axios
-      .get(process.env.VUE_APP_HUMANITIES)
-      .then(response => {
-        this.users = response.data
-      })
-
-  }
 }
 </script>
 

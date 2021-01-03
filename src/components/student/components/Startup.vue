@@ -28,25 +28,16 @@
 </template>
 
 <script>
-// import data from '../../../data/startup.json'
-import axios from 'axios'
+import data from '../../../data/startup.json'
 export default {
   name: 'cards',
   data () {
     return {
-      startups: null,
+      startups: data,
     }
   },
   methods: {
   },
-  mounted() {
-    axios
-      .get(process.env.VUE_APP_STARTUP)
-      .then(response => {
-        this.startups = response.data
-      })
-
-  }
 }
 </script>
 

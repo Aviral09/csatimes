@@ -37,22 +37,13 @@
   </div>
 </template>
 <script>
-// import data from '../../../data/sports.json'
-import axios from 'axios'
+import data from '../../../data/sports.json'
 export default {
   data () {
     return {
-      sports: null,
+      sports: data,
     }
   },
-  mounted() {
-    axios
-      .get(process.env.VUE_APP_SPORTS)
-      .then(response => {
-        this.sports = response.data
-      })
-
-  }
 }
 </script>
 

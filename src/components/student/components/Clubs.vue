@@ -33,22 +33,13 @@
 </template>
 
 <script>
-import axios from 'axios'
-// import data from '../../../data/pclubs.json'
+import data from '../../../data/pclubs.json'
 export default {
   data () {
     return {
-      clubs: null,
+      clubs: data,
     }
   },
-  mounted() {
-    axios
-      .get('https://raw.githubusercontent.com/Aviral09/csatimesoriginal/master/data/pclubs.json?token=AOHNF5HJT66SSJNO62FZRSK75G6HE')
-      .then(response => {
-        this.clubs = response.data
-      })
-
-  }
 }
 </script>
 
